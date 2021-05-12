@@ -3,10 +3,10 @@
 
 <head>
 
-    <title>Title Here</title>
+    <title>Shoolin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.JPG">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <!-- Load Require CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -17,9 +17,73 @@
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/custom.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- <style>
+        .dropdown-submenu {
+            position: relative;
+        }
 
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                //method 1: remove show from sibilings and their children under your first parent
+
+                     		if (!$(this).next().hasClass('show')) {
+                              
+                                $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+                             }  
+
+
+                //method 2: remove show from all siblings of all your parents
+                $(this).parents('.dropdown-submenu').siblings().find('.show').removeClass("show");
+
+                $(this).siblings().toggleClass("show");
+
+
+                //collapse all after nav is closed
+                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                    $('.dropdown-submenu .show').removeClass("show");
+                });
+
+            });
+        });
+
+    </script> -->
+    <style>
+        .navbar-nav li:hover>ul.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: 2px;
+            margin-left: 25px;
+        }
+
+        /* rotate caret on hover */
+        .dropdown-menu>li>a:hover:after {
+            text-decoration: underline;
+            transform: rotate(-90deg);
+        }
+    </style>
 </head>
 
 <body>
@@ -27,8 +91,9 @@
     <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
         <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand h1" href="index.html">
-                <i class='bx bx-buildings bx-sm text-dark'></i>
-                <span class="text-dark h4">Temporary</span> <span class="text-primary h4">Website</span>
+                <!-- <i class='bx bx-buildings bx-sm text-dark'></i> -->
+                <img src="./assets/img/apple-icon.JPG" alt="shoolin" width="25px" height="25px" style="margin-bottom: 5px;">
+                <span class="text-dark h4">Shoolin</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -43,23 +108,152 @@
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
+                        </li> -->
+                        <!-- <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Product</a>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item dropdown">
-                            <a class="nav-link btn-outline-primary rounded-pill dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link btn-outline-primary rounded-pill dropdown-toggle" href="#"
+                                id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                                 Dropdown link
                             </a>
                             <div class="dropdown-menu  text-center" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item btn-outline-primary" href="#">Action</a>
-                                <a class="dropdown-item btn-outline-primary"  href="#">Another action</a>
+                                <a class="dropdown-item btn-outline-primary" href="#">Another action</a>
                                 <a class="dropdown-item btn-outline-primary" href="#">Something else here</a>
                             </div>
                         </li> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link btn-outline-primary rounded-pill dropdown-toggle" href="#"
+                                id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"> MBBS Abroad </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item btn-outline-primary dropdown-toggle" href="#">
+                                        MBBS - Belize</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/belize/centralamerica.html">CA
+                                                Health Sciences University</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item btn-outline-primary dropdown-toggle" href="#">
+                                        MBBS - Russia</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/russia/kuban.html">Kuban State
+                                                Medical University</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/russia/ulyanovsk.html">Ulyanovsk
+                                                State University</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item btn-outline-primary dropdown-toggle" href="#">
+                                        MBBS - Armenia</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/armenia/mkhitar.html">Mkhitar Gosh
+                                                University</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="./colleges/armenia/traditionalmedicine.html">University of
+                                                Traditional Medicine</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/armenia/teresa.html">St. Teresa
+                                                School of Medicine</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item btn-outline-primary dropdown-toggle" href="#">
+                                        MBBS - Ukraine</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="./colleges/ukraine/bogomolets.html">Bogomolets National Medical
+                                                University</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/ukraine/sunnystate.html">Sumy
+                                                State University</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item"
+                                                href="./colleges/ukraine/dnipropetrovsk.html">Dnipropetrovsk Medical
+                                                Academy</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item btn-outline-primary dropdown-toggle" href="#">
+                                        MBBS - Kyrgyzstan</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/kyrgyzstan/jalalabad.html">Jalalabad State University</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/kyrgyzstan/amu.html">Asian Medical University</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item btn-outline-primary dropdown-toggle" href="#">
+                                        MBBS - Georgia</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/georgia/european.html">European University</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/georgia/tbilisi.html">Tbilisi State Medical University</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item btn-outline-primary dropdown-toggle" href="#">
+                                        MBBS - Philippines</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/philippines/emilio.html">Emilio Aguinaldo College</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/philippines/ama.html">AmA School Of Medicine</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/philippines/perpetual.html">Perpetual Help System DALTA
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item btn-outline-primary dropdown-toggle" href="#">
+                                        MBBS - Bangladesh</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/bangladesh/sylhet.html">Sylhet Women Medical College</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/bangladesh/eastwest.html">East West Medical College</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./colleges/bangladesh/ibn.html">Ibn Sina Medical College
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
                         <!-- <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="pricing.html">Pricing</a>
                         </li> -->
@@ -88,19 +282,19 @@
                 <ol class="carousel-indicators">
                     <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
                     <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                    <!-- <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li> -->
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="py-5 row d-flex align-items-center">
                             <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
                                 <h1
-                                    class="banner-heading h1 text-secondary display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
-                                    First Carousel<strong></strong> comes
-                                    <br>over here
+                                    class="banner-heading h1 text-dark display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
+                                    Dream to study<strong> Abroad? </strong>
+                                    <br>
                                 </h1>
-                                <p class="banner-body text-muted py-3 mx-0 px-0">
-                                    Details about the first carosel goes here.
+                                <p class="banner-body text-dark py-3 mx-0 px-0">
+                                    We will direct you to the process of studying abroad
                                 </p>
                                 <!-- <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="#"
                                     role="button">Get Started</a> -->
@@ -110,22 +304,22 @@
                     <div class="carousel-item">
                         <div class="py-5 row d-flex align-items-center">
                             <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
-                                <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
-                                    Second Carousel<strong></strong> comes
-                                    <br>over here
+                                <h1
+                                    class="banner-heading h1 text-dark display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
+                                    Make the most of your <strong>Oppertunities</strong>
                                 </h1>
-                                <p class="banner-body text-muted py-3 mx-0 px-0">
-                                    Details about the second carosel goes here.
-                                </p>
+                                <!-- <p class="banner-body text-muted py-3 mx-0 px-0">
+                                    
+                                </p> -->
                                 <!-- <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="#"
                                     role="button">Get Started</a> -->
                             </div>
                         </div>
 
                     </div>
-                    <div class="carousel-item">
+                    <!-- <div class="carousel-item"> -->
 
-                        <div class="py-5 row d-flex align-items-center">
+                    <!-- <div class="py-5 row d-flex align-items-center">
                             <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
                                 <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
                                     Third Carousel<strong></strong> comes
@@ -133,13 +327,13 @@
                                 </h1>
                                 <p class="banner-body text-muted py-3 mx-0 px-0">
                                     Details about the third carosel goes here.
-                                </p>
-                                <!-- <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="#"
+                                </p> -->
+                    <!-- <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="#"
                                     role="button">Get Started</a> -->
-                            </div>
-                        </div>
+                    <!-- </div>
+                        </div> -->
 
-                    </div>
+                    <!-- </div> -->
                 </div>
                 <a class="carousel-control-prev text-decoration-none" href="#carouselExampleIndicators" role="button"
                     data-bs-slide="prev">
@@ -164,17 +358,107 @@
     <section class="service-wrapper py-3">
         <div class="container-fluid pb-3">
             <div class="row">
-                <h2 class="h2 text-center col-12 py-5 semi-bold-600">What Defines Company Name</h2>
+                <h2 class="h2 text-center col-12 py-5 semi-bold-600">What Defines Shoolin?</h2>
                 <div class="service-header col-2 col-lg-3 text-end light-300">
                     <i class='bx bx-arrow-from-left h3 mt-1'></i>
                 </div>
                 <div class="service-heading col-10 col-lg-9 text-start float-end light-300">
-                    <h2 class="h3 pb-4 typo-space-line">Small title for about here</h2>
+                    <h2 class="h3 pb-4 typo-space-line">Shoolin shows you the way.</h2>
                 </div>
             </div>
             <p class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 text-start pb-3 text-muted px-2">
-                Some 2-3lines of details go here explain about what the company is about and what is the need.
-                Basically brief on about section.
+                As one of the leading education consultants in Kerala, Anix Education was founded in 2006 with the goal
+                of making global education available to students all around the world. By helping students secure world
+                class education within reasonable budget, Anix has emerged as the most respected foreign education
+                consultants in the country. Having aided thousands of students pursue their dream careers in ideal
+                countries, Anix Education takes immense pride in providing consultation to candidates from all walks of
+                life.
+
+                Following its modest origins at the heart of Kochi, Anix Education has branched out to offer a broad
+                range of consultation services to students everywhere. With consultation centers in major centers of the
+                world and associations in over 20 countries, Anix education boasts a long tradition of affiliating with
+                as many as 300 universities. Operating across India in major hub locations, Anix Education is equipped
+                with a host of affiliated centers all over the United Arab Emirates (UAE). Aided by a powerful network
+                of experienced consultants and educators, Anix Education continues to make life-changing influence in
+                the lives of students.
+            </p>
+        </div>
+
+        <div class="container-fluid pb-3" >
+            <div class="row">
+                <h2 class="h2 text-center col-12 py-5 semi-bold-600">UNIVERSITY CAMPUSES AROUND THE WORLD</h2>
+            </div>
+            <p class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 text-start pb-3 text-muted px-2">
+            <div class="container">
+                <table class="py-5 table table-striped text-center table-bordered " >
+                    <tr>
+                        <th rowspan="3">Armenia</th>
+                        <th> <a href="./colleges/armenia/mkhitar.html" style="text-decoration: none; color:dodgerblue;"> > Mkhitar Gosh University</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/armenia/traditionalmedicine.html" style="text-decoration: none; color:dodgerblue;"> > University of Traditional Medicine</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/armenia/teresa.html" style="text-decoration: none; color:dodgerblue;" > > St. Teresa School of Medicine</a> </th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Bangladesh</th>
+                        <th><a href="./colleges/bangladesh/sylhet.html" style="text-decoration: none; color:dodgerblue;" > > Sylhet Women Medical College</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/bangladesh/eastwest.html" style="text-decoration: none; color:dodgerblue;" > > East West Medical College</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/bangladesh/ibn.html" style="text-decoration: none; color:dodgerblue;" > > Ibn Sina Medical College</a> </th>
+                    </tr>
+                    <tr>
+                        <th rowspan="1">Belize</th>
+                        <th> <a href="./colleges/belize/centralamerica.html" style="text-decoration: none; color:dodgerblue;" > > CA Health Sciences University</a> </th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Georgia</th>
+                        <th> <a href="./colleges/georgia/european.html" style="text-decoration: none; color:dodgerblue;" > > European University</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/georgia/tbilisi.html" style="text-decoration: none; color:dodgerblue;" > > Tbilisi State Medical University</a> </th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Kyrgyzstan</th>
+                        <th> <a href="./colleges/kyrgyzstan/jalalabad.html" style="text-decoration: none; color:dodgerblue;" > > Jalalabad State University</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/kyrgyzstan/amu.html" style="text-decoration: none; color:dodgerblue;" > > Asian Medical University</a> </th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Philippines</th>
+                        <th> <a href="./colleges/philippines/emilio.html" style="text-decoration: none; color:dodgerblue;" > > Emilio Aguinaldo College</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/philippines/ama.html" style="text-decoration: none; color:dodgerblue;" > > AmA School Of Medicine</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/philippines/perpetual.html" style="text-decoration: none; color:dodgerblue;" > > Perpetual Help System DALTA</a> </th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Russia</th>
+                        <th> <a href="./colleges/russia/kuban.html" style="text-decoration: none; color:dodgerblue;" > > Kuban State Medical University</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/russia/ulyanovsk.html" style="text-decoration: none; color:dodgerblue;" > > Ulyanovsk State University</a> </th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Ukraine</th>
+                        <th> <a href="./colleges/ukraine/bogomolets.html" style="text-decoration: none; color:dodgerblue;" > > Bogomolets National Medical University</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/ukraine/sunnystate.html" style="text-decoration: none; color:dodgerblue;" > > Sumy State University</a> </th>
+                    </tr>
+                    <tr>
+                        <th> <a href="./colleges/ukraine/dnipropetrovsk.html" style="text-decoration: none; color:dodgerblue;" > > Dnipropetrovsk Medical Academy</a> </th>
+                    </tr>
+                </table>
+            </div>
+
             </p>
         </div>
 
@@ -183,20 +467,9 @@
                 <ul class="nav d-flex justify-content-center">
                     <li class="nav-item mx-lg-4">
                         <a class="filter-btn nav-link btn-outline-primary active shadow rounded-pill text-light px-4 light-300"
-                            href="#" data-filter=".project">Applications</a>
+                            href="#" data-filter=".project">Services</a>
                     </li>
-                    <!-- <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300"
-                            href="#" data-filter=".graphic">Graphics</a>
-                    </li>
-                    <li class="filter-btn nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300"
-                            href="#" data-filter=".ui">UI/UX</a>
-                    </li>
-                    <li class="nav-item mx-lg-4">
-                        <a class="filter-btn nav-link btn-outline-primary rounded-pill text-light px-4 light-300"
-                            href="#" data-filter=".branding">Branding</a>
-                    </li> -->
+
                 </ul>
             </div>
         </div>
@@ -212,138 +485,64 @@
                     <img class="service card-img" src="./assets/img/services-01.jpg" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Product 1</span>
-                            <p class="card-text">Product 1 details goes here</p>
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Free
+                                Counselling</span>
+                            <p class="card-text">
+                                Shoolin has a team of trained and expert counselors.
+                            </p>
                         </div>
                     </div>
                 </a>
-            </div><!-- End Recent Work -->
+            </div>
 
-            <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project  ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="./assets/img/services-02.jpg" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Product 2</span>
-                            <p class="card-text">Product 2 details goes here</p>
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">University
+                                Selection</span>
+                            <p class="card-text">
+                                Shoolin counselors help you to select the right University.
+                            </p>
                         </div>
                     </div>
                 </a>
-            </div><!-- End Recent Work -->
+            </div>
 
-            <!-- Start Recent Work -->
+
             <div class="col-xl-3 col-md-4 col-sm-6 project ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="./assets/img/services-03.jpg" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Product 3</span>
-                            <p class="card-text">Product 3 details goes here</p>
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Documentation
+                                Assistance</span>
+                            <p class="card-text">
+                                All kinds of documentation process will be assisted accordingly
+                            </p>
                         </div>
                     </div>
                 </a>
-            </div><!-- End Recent Work -->
+            </div>
 
-            <!-- Start Recent Work -->
             <div class="col-xl-3 col-md-4 col-sm-6 project  ">
                 <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
                     <img class="card-img" src="./assets/img/services-04.jpg" alt="Card image">
                     <div class="service-work-vertical card-img-overlay d-flex align-items-end">
                         <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Product 4</span>
-                            <p class="card-text">Product 4 details goes here</p>
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">
+                                Pre-Departure Guidance</span>
+                            <p class="card-text">A get together of students and parents before the departure.</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <!-- End Recent Work -->
 
-            <!-- Start Recent Work -->
-            <!-- <div class="col-xl-3 col-md-4 col-sm-6 project  ">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-05.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Product 5</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-            <!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <!-- <div class="col-xl-3 col-md-4 col-sm-6 project ">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-06.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Product 6</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-            <!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <!-- <div class="col-xl-3 col-md-4 col-sm-6 project ">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-07.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Product 7</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-            <!-- End Recent Work -->
-
-            <!-- Start Recent Work -->
-            <!-- <div class="col-xl-3 col-md-4 col-sm-6 project   ">
-                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
-                    <img class="card-img" src="./assets/img/services-08.jpg" alt="Card image">
-                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
-                        <div class="service-work-content text-left text-light">
-                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Product 8</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-            <!-- End Recent Work -->
 
         </div>
     </section>
-    <!-- End Service -->
 
-
-
-
-
-
-    <!-- Start View Work -->
-    <!-- <section class="bg-secondary">
-        <div class="container py-5">
-            <div class="row d-flex justify-content-center text-center">
-                <div class="col-lg-2 col-12 text-light align-items-center">
-                    <i class='display-1 bx bxs-box bx-lg'></i>
-                </div>
-                <div class="col-lg-7 col-12 text-light pt-2">
-                    <h3 class="h4 light-300">Great transformations successful</h3>
-                    <p class="light-300">Quis ipsum suspendisse ultrices gravida.</p>
-                </div>
-                <div class="col-lg-3 col-12 pt-4">
-                    <a href="#" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">View Our Work</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- End View Work -->
-
-    <!-- Start Recent Work -->
     <section class="py-5 mb-5">
         <div class="container">
             <div class="recent-work-header row text-center pb-5">
@@ -357,8 +556,16 @@
                         <img class="recent-work-img card-img" src="./assets/img/recent-work-01.jpg" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Application 1</h3>
-                                <p class="card-text">Deatils about application 1</p>
+                                <h3 class="card-title light-300">Free
+                                    Counselling</h3>
+                                <p class="card-text">Shoolin has a team of trained and expert counselors, who provide
+                                    help to identify the professional goals, enabling the student to take a wiser
+                                    academic
+                                    decision. These counselors give Personal Guidance to choose courses that perfectly
+                                    fits
+                                    your Career or Personal Goals. We also host direct interviews with the Russian
+                                    University representatives and provide you with all-inclusive information on various
+                                    study topics.</p>
                             </div>
                         </div>
                     </a>
@@ -370,8 +577,16 @@
                         <img class="recent-work-img card-img" src="./assets/img/recent-work-02.jpg" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Application 2</h3>
-                                <p class="card-text">Deatils about application 2</p>
+                                <h3 class="card-title light-300">University
+                                    Selection</h3>
+                                <p class="card-text">
+                                    Shoolin counselors help you to select the right University across
+                                    the world according to the need and requirement of the student. We look at our
+                                    students’
+                                    academic documents to make sure it is as per the norms specified by the University.
+                                    Each student is given a comprehensive overview of program details along with it we
+                                    help them choose the right program.
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -383,53 +598,87 @@
                         <img class="recent-work-img card-img" src="./assets/img/recent-work-03.jpg" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Application 3</h3>
-                                <p class="card-text">Deatils about application 3</p>
+                                <h3 class="card-title light-300">Documentation
+                                    Assistance</h3>
+                                <p class="card-text">
+                                <ul>
+                                    <li>Passport Assistance: Shoolin assists you completely while applying for the
+                                        passport. We provide you with the admission letter that helps in acquiring the
+                                        passport
+                                        on Tatkal(immediate) Basis.</li>
+                                    <li>Education Loan: Shoolin provides you with all the necessary documentations
+                                        which
+                                        provide assistance in getting the educational loans.</li>
+                                </ul>
+                                </p>
                             </div>
                         </div>
                     </a>
                 </div><!-- End Recent Work -->
 
                 <!-- Start Recent Work -->
-                <!-- <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3">
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="./assets/img/recent-work-04.jpg" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Public Relation</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet</p>
+                                <h3 class="card-title light-300">Pre-Departure Guidance</h3>
+                                <p class="card-text">
+                                    Every year, Shoolin conducts SOBRANIYE, a get together of students and parents
+                                    before the departure. In this session, they get to know about the ins and outs of
+                                    the respective country and traveling guidelines. Also, we let you contact the other
+                                    students who are already studying in the respective countries.
+                                </p>
                             </div>
                         </div>
                     </a>
-                </div> -->
+                </div>
                 <!-- End Recent Work -->
 
                 <!-- Start Recent Work -->
-                <!-- <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3">
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="./assets/img/recent-work-05.jpg" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Branding</h3>
-                                <p class="card-text">Put enim ad minim veniam</p>
+                                <h3 class="card-title light-300">Travel Assistance</h3>
+                                <p class="card-text">
+                                    At Shoolin, we have a separate department called RUS TOURISM which provides
+                                    you with the best possible options to travel. We help you identify the right airline
+                                    for excess baggage schemes. The department helps you in your entire course period in
+                                    traveling. We also arrange travel for parents and relatives of the student when
+                                    required.
+                                </p>
                             </div>
                         </div>
                     </a>
-                </div> -->
+                </div>
                 <!-- End Recent Work -->
 
                 <!-- Start Recent Work -->
-                <!-- <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3">
                     <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="./assets/img/recent-work-06.jpg" alt="Card image">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
-                                <h3 class="card-title light-300">Creative Design</h3>
-                                <p class="card-text">Mollit anim id est laborum.</p>
+                                <h3 class="card-title light-300">Post Departure Services</h3>
+                                <p class="card-text">
+                                <ul>
+                                    <li>We accompany our student from the Airport to the University.</li>
+                                    <li>We provide the accommodation facilities to our students till they get a hostel
+                                        room.
+                                    </li>
+                                    <li>We assist you in your hostel registration and allotting you the room.</li>
+                                    <!-- <li>We assist you with the final documentation in the University.</li> -->
+
+
+
+                                </ul>
+                                </p>
                             </div>
                         </div>
                     </a>
-                </div> -->
+                </div>
                 <!-- End Recent Work -->
 
             </div>
@@ -447,10 +696,10 @@
                 <div class="col-lg-3 col-12 align-left">
                     <a class="navbar-brand" href="index.html">
                         <i class='bx bx-buildings bx-sm text-light'></i>
-                        <span class="text-light h5">Company</span> <span class="text-light h5 semi-bold-600">Name</span>
+                        <span class="text-light h5">Shoolin</span>
                     </a>
                     <p class="text-light my-lg-4 my-2">
-                        May be about company can be given here or even the address of the company works out.
+                        Bangalore, <br> Karnataka, <br> India.
                     </p>
                     <ul class="list-inline footer-icons light-300">
                         <li class="list-inline-item m-0">
@@ -478,14 +727,14 @@
                                 <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
                                     class="text-decoration-none text-light" href="index.html">Home</a>
                             </li>
-                            <li class="pb-2">
+                            <!-- <li class="pb-2">
                                 <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
                                     class="text-decoration-none text-light py-1" href="about.html">About</a>
                             </li>
                             <li class="pb-2">
                                 <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
                                     class="text-decoration-none text-light py-1" href="work.html">Product</a>
-                            </li>
+                            </li> -->
                             <!-- <li class="pb-2">
                                 <i class='bx-fw bx bxs-chevron-right bx-xs'></i></i><a
                                     class="text-decoration-none text-light py-1" href="pricing.html">Price</a>
@@ -502,21 +751,24 @@
                     <ul class="list-unstyled text-light light-300">
                         <li class="pb-2">
                             <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
-                                class="text-decoration-none text-light py-1" href="#">Product 1</a>
+                                class="text-decoration-none text-light py-1" href="#">Free
+                                Counselling</a>
                         </li>
                         <li class="pb-2">
                             <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
-                                class="text-decoration-none text-light py-1" href="#">Product 2</a>
+                                class="text-decoration-none text-light py-1" href="#">University
+                                Selection</a>
                         </li>
                         <li class="pb-2">
                             <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
-                                class="text-decoration-none text-light py-1" href="#">Product 3</a>
+                                class="text-decoration-none text-light py-1" href="#">Documentation
+                                Assistance</a>
                         </li>
-                        <!-- <li class="pb-2">
+                        <li class="pb-2">
                             <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
                                 class="text-decoration-none text-light py-1" href="#">Social Media</a>
                         </li>
-                        <li class="pb-2">
+                        <!--  <li class="pb-2">
                             <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
                                 class="text-decoration-none text-light py-1" href="#">Digital Solution</a>
                         </li>
@@ -549,7 +801,7 @@
                 <div class="row pt-2">
                     <div class="col-lg-6 col-sm-12">
                         <p class="text-lg-start text-center text-light light-300">
-                            © Copyright 2021 Company Name. All Rights Reserved.
+                            © Copyright 2021 Shoolin. All Rights Reserved.
                         </p>
                     </div>
                     <!-- <div class="col-lg-6 col-sm-12">
